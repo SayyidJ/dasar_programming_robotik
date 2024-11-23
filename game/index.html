@@ -9,47 +9,58 @@
     html,
     body {
       height: 100%;
+      width: 100%;
       padding: 0;
       margin: 0;
     }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .title {
+      flex: 0 0 auto;
       padding-bottom: 2rem;
       font: 2em sans-serif;
       color: darkslategray;
       letter-spacing: 1rem;
     }
 
-    .canvas_container {
+    .column {
       width: 1280px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100%;
-      border: 1px solid lightslategrey;
+
+      padding: 4rem;
+      box-sizing: border-box;
     }
 
-    #_game {
-      display: block;
-      height: 100%;
+    .canvas_container {
+      flex: 1 1 auto;
       width: 100%;
+      outline: 1px solid blue;
     }
 
     @media (max-width: 1280px) {
-      .canvas_container {
+      .column {
         width: 640px;
       }
     }
-    @media (max-width: 1280px) {
-      .canvas_container {
+    @media (max-width: 640px) {
+      .column {
         width: 320px;
       }
     }
   </style>
   <body>
-    <div class="canvas_container">
+    <div class="column">
       <div class="title">KELERENG</div>
-      <canvas id="_game"></canvas>
+      <div id="_game" class="canvas_container"></div>
     </div>
   </body>
+  <script type="module" src="main.ts"></script>
 </html>
