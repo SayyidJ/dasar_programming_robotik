@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Kelereng</title>
+  </head>
+  <style>
+    html,
+    body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    .title {
+      padding-bottom: 2rem;
+      font: 2em sans-serif;
+      color: darkslategray;
+      letter-spacing: 1rem;
+    }
+
+    .canvas_container {
+      width: 1280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border: 1px solid lightslategrey;
+    }
+
+    #_game {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: 1280px) {
+      .canvas_container {
+        width: 640px;
+      }
+    }
+    @media (max-width: 1280px) {
+      .canvas_container {
+        width: 320px;
+      }
+    }
+  </style>
+  <body>
+    <div class="canvas_container">
+      <div class="title">KELERENG</div>
+      <canvas id="_game"></canvas>
+    </div>
+  </body>
+</html>
