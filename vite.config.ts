@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
+import monacoEditorPlugin from "vite-plugin-monaco-editor";
 
-export default defineConfig({
-  root: "game/",
-  server: {},
-  build: {
-    sourcemap: true,
-  },
-});
+export default () => {
+  return defineConfig({
+    root: "src",
+    plugins: [monacoEditorPlugin({})],
+  });
+};
